@@ -194,7 +194,7 @@ AutoLoad::getReady()->isLoaded($className);
 ##### <i>`AutoLoad::`</i> `getLoaded()`
 
 > **Return Values**   
-> `(array)` Returns an associative `array` contains all the loaded class files.
+> `(array)` Returns an associative `array` containing all the loaded class files.
 
 ```PHP
 AutoLoad::getReady()->getLoaded();
@@ -223,3 +223,11 @@ $f = new Foo('Err :('); // Fatal error: Class 'Foo' not found in...
 // Start it again, Fire!
 AutoLoad::getReady()->fire();
 ```
+
+License
+-------
+Created by [@Hashem Qolami](https://github.com/HashemQolami) with ♥ and released under the [MIT License](http://opensource.org/licenses/MIT).   
+Any suggestions are welcome. [create](https://github.com/HashemQolami/PHP-Autoload-Class/issues/new) an issue if you have any problems/ideas.
+
+Thanks,  
+-Hashem Qolami <<hashem@qolami.com>>
