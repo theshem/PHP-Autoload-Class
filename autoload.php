@@ -1,9 +1,9 @@
 <?php
 /**
- * A PHP AutoLoad Library for versions 5.1.2 to 5.2.x
+ * A PHP AutoLoad Class for versions 5.1.2+
  *
  * @author      Hashem Qolami <hashem@qolami.com>
- * @link        https://github.com/HashemQolami/PHP-Autoload-Library
+ * @link        https://github.com/HashemQolami/PHP-Autoload-Class
  * @license     http://opensource.org/licenses/MIT (MIT license)
  * @copyright   Copyright (c) 2013, Hashem Qolami.
  * @since       Version 1.0
@@ -90,8 +90,8 @@ class AutoLoad
     /**
      * Adds the paths of class files in the path storage.
      * 
-     * @param  array  $path Paths of class files.
-     * @return object       Instance of class.
+     * @param  string|array $path Paths of class files.
+     * @return object             Instance of class.
      */
     public function addPath($path = array())
     {
@@ -122,8 +122,8 @@ class AutoLoad
     /**
      * Removes the paths of class files from the path storage.
      * 
-     * @param  array  $path
-     * @return object       Instance of class.
+     * @param  string|array $path Paths of class files.
+     * @return object             Instance of class.
      */
     public function removePath($path = array())
     {
@@ -144,8 +144,8 @@ class AutoLoad
     /**
      * Adds the file extensions of class files in the extension storage.
      * 
-     * @param  array  $extension File extensions of class files.
-     * @return object            Instance of class.
+     * @param  string|array $extension File extensions of class files.
+     * @return object                  Instance of class.
      */
     public function addExtension($extension = array())
     {
@@ -176,8 +176,8 @@ class AutoLoad
     /**
      * Removes the file extensions of class files from the extension storage.
      * 
-     * @param  array  $extension
-     * @return object            Instance of class
+     * @param  string|array $extension File extensions of class files.
+     * @return object                  Instance of class
      */
     public function removeExtension($extension = array())
     {
@@ -209,7 +209,7 @@ class AutoLoad
     /**
      * Checks whether the specified class is loaded before.
      * 
-     * @param  string  $className The ame of the class.
+     * @param  string  $className The name of the class.
      * @return boolean            Returns false if the class is not loaded.
      */
     public function isLoaded($className)
@@ -222,7 +222,7 @@ class AutoLoad
      * 
      * @return array
      */
-    public function getLoadedFiles()
+    public function getLoaded()
     {
         return $this->_loaded;
     }

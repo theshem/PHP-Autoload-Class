@@ -26,7 +26,7 @@ var_export(AutoLoad::getReady()->getPath());         // array ( 0 => './lib/' )
 
 var_export(AutoLoad::getReady()->getExtension());    // array ( 0 => '.php', 1 => '.class.php' )
 
-var_export(AutoLoad::getReady()->getLoadedFiles());  // array ( )
+var_export(AutoLoad::getReady()->getLoaded());       // array ( )
 
 var_export(AutoLoad::getReady()->isLoaded('Foo'));   // false
 
@@ -34,7 +34,7 @@ $f = new Foo('Here it is!');
 
 var_export(AutoLoad::getReady()->isLoaded('Foo'));   // true
 
-var_export(AutoLoad::getReady()->getLoadedFiles());  // array ( 'Foo' => './lib/Foo.class.php' )
+var_export(AutoLoad::getReady()->getLoaded());       // array ( 'Foo' => './lib/Foo.class.php' )
 
 var_export($f->getProperty());                       // 'Here it is!'
 
@@ -52,7 +52,7 @@ $loader->addPath('inc')->addExtension('.inc');
 // Stop autoloading.
 $loader->halt();
 
-// $b = new Bar('Errrrrrrr :(');    // Fatal error: Class 'Bar' not found in...
+// $b = new Bar('Err :(');    // Fatal error: Class 'Bar' not found in...
 
 // Fire!
 $loader->fire();
