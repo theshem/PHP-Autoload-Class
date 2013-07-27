@@ -218,7 +218,7 @@ Manage Autoloading
 // Stop autoloading, Halt!
 AutoLoad::getReady()->halt();
 
-$f = new Foo('Err :('); // **Fatal error:** Class 'Foo' not found in...
+$f = new Foo('Err :('); // Fatal error: Class 'Foo' not found in...
 
 // Start it again, Fire!
 AutoLoad::getReady()->fire();
