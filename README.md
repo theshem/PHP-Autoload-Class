@@ -222,11 +222,13 @@ $f = new Foo('Err :('); // Fatal error: Class 'Foo' not found in...
 
 // Start it again, Fire!
 AutoLoad::getReady()->fire();
+
+$f = new Foo('It Works :)');
 ```
 
 License
 -------
-Created by [@Hashem Qolami](https://github.com/HashemQolami) with ♥ and released under the [MIT License](http://opensource.org/licenses/MIT).   
+Built by [@HashemQolami](https://github.com/HashemQolami) with ♥ and released under the [MIT License](http://opensource.org/licenses/MIT).   
 Any suggestions are welcome. [create](https://github.com/HashemQolami/PHP-Autoload-Class/issues/new) an issue if you have any problems/ideas.
 
 Thanks,  
