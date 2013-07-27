@@ -243,13 +243,13 @@ class AutoLoad
             foreach ($this->_extensions as $ext) {
                 // Check whether the file is accessible.
                 if (@is_readable($file = $path.$className.$ext)) {
-                    // Store the detected class file.
-                    $this->_setLoaded($className, $file);
                     break 2;
                 }
             }
         }
 
+        // Store the detected class file.
+        $this->_setLoaded($className, $file);
         require $file;
     }
 }
